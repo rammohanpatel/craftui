@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 CraftUI CLI
 
-## Getting Started
+`craftui` is a lightweight CLI tool to easily add reusable UI components to your project in either JavaScript or TypeScript, in your desired folder structure.
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+### 🔹 1. Use It Instantly (No Install Needed)
+Use `npx` to run the CLI directly without installing it:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx @curious_ram/craftui add <component-name> --lang <js|ts|tsx> --dest <destination-folder>
 ```
+Example:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npx @curious_ram/craftui add button --lang js --dest ./src/component
+````
+### 🔹 2. Install It Globally (One-Time Setup)
+If you want to use craftui like a system-wide command:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install -g @curious_ram/craftui
+```
+Now you can run:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+craftui add <component-name> --lang <js|ts|tsx> --dest <destination-folder>
+```
+Example:
 
-## Learn More
+```bash
+craftui add card --lang tsx --dest ./src/components
+```
+### 🔹 3. Add It to Your Project (package.json)
+If you'd prefer to install it locally so your team can use it via npm run or pnpm:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install -D @curious_ram/craftui
+```
+Then in your package.json scripts section:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```json
+"scripts": {
+  "add:button": "craftui add button --lang js --dest ./src/components"
+}
+```
+Now you can run:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run add:button
+```
+### 📁 Available Components
+Component	Description
+button	A simple styled button
+card	A responsive UI card
 
-## Deploy on Vercel
+### 🌐 Language Options
+Use the ```--lang``` flag to specify the file type:
+```
+   Flag	         Output File
+--lang js	component.js
+--lang ts	component.ts
+--lang tsx	component.tsx
+```
+### 📂 Destination Option
+Use the ```--dest``` flag to choose where the component should be copied:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+craftui add button --lang js --dest ./src/ui/components
+```
+If the destination folder doesn't exist, it will be created.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Using npx
+```npx @curious_ram/craftui add button --lang js --dest ./src/components```
+
+## After global install
+``` craftui add card --lang tsx --dest ./src/ui```
+
+## As a script in package.json
+```npm run add:button```
+
+## 📦 Publish Info
+This package is published to npm as:
+👉 @curious_ram/craftui
+
+## 🛠️ Author
+Created by Ram Mohan Patel
