@@ -1,4 +1,4 @@
-# 📦 CraftUI CLI
+# 📦 [CraftUI CLI](https://www.npmjs.com/package/@curious_ram/craftui)
 
 `craftui` is a lightweight CLI tool to easily add reusable UI components to your project in either JavaScript or TypeScript, in your desired folder structure.
 
@@ -84,7 +84,7 @@ If the destination folder doesn't exist, it will be created.
 
 ## 📦 Publish Info
 This package is published to npm as:
-👉 @curious_ram/craftui
+👉 [@curious_ram/craftui](https://www.npmjs.com/package/@curious_ram/craftui)
 
 ## 🛠️ Author
 Created by Ram Mohan Patel
