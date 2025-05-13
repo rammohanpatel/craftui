@@ -13,7 +13,9 @@
   "dependencies": {
     "commander": "^13.1.0",
     "inquirer": "^12.6.1",
+    "lucide-react": "^0.510.0",
     "next": "15.3.2",
+    "radix-ui": "^1.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -29,6 +31,6 @@
     "typescript": "^5"
   },
   "bin": {
-   "craftui": "./packages/cli/index.js"
+    "craftui": "./packages/cli/index.js"
   }
 }
