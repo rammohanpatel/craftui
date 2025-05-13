@@ -1,4 +1,5 @@
 "use client"
+
 import { components } from '../../../lib/compoentsMetaData/components'
 import { sidebar } from '../../../sidebar.config'
 import { use } from 'react'
@@ -8,18 +9,12 @@ type ComponentType = {
     [key: string]: { name: string; slug: string; preview: React.ReactElement; code: string; };
 };
 
-type PageProps = {
-    params: { slug: string }
-}
-
-const ComponentPage = (props: PageProps) => {
-    // unwrap the params object using React.use()
-    const resolvedParams = use(props.params) as { slug: string };
+// For client components in app directory with async params
+export default function ComponentPage({ params }: { params: Promise<{ slug: string }> }) {
+    const resolvedParams = use(params);
     const slug = resolvedParams.slug;
-
+    
     const component = (components as ComponentType)[slug];
-
-    //console.log("Slug : ",component.slug)
 
     if (!component) return (
         <>
@@ -53,8 +48,5 @@ const ComponentPage = (props: PageProps) => {
                 </main>
             </div>
         </>
-
     );
 }
-
-export default ComponentPage;
