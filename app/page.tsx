@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link"
 import Navbar from "@/components/Navbar"
-import { Github, ExternalLink, Code, Package, Palette, Layers, Zap, ChevronRight } from "lucide-react"
 
 
 export default function Home() {

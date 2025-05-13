@@ -88,7 +88,7 @@ export default function Page() {
             </div>
             <div className="p-6">
               <p className="text-gray-600 mb-4">
-                If you'd prefer to install it locally so your team can use it via npm run or pnpm:
+                If you&apos;d prefer to install it locally so your team can use it via npm run or pnpm:
               </p>
               <div className="bg-gray-800 rounded-lg overflow-hidden">
                 <div className="p-4 text-white overflow-x-auto">

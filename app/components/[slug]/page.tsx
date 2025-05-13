@@ -1,5 +1,4 @@
 "use client"
-import { useRouter } from 'next/navigation';
 import { components } from '../../../lib/compoentsMetaData/components'
 import { sidebar } from '../../../sidebar.config'
 import { use } from 'react'
@@ -18,7 +17,6 @@ const ComponentPage = (props: PageProps) => {
     const resolvedParams = use(props.params) as { slug: string };
     const slug = resolvedParams.slug;
 
-    const router = useRouter();
     const component = (components as ComponentType)[slug];
 
     //console.log("Slug : ",component.slug)
